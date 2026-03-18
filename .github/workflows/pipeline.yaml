@@ -14,4 +14,4 @@ jobs:
         run: docker build -t test-image 
           
       - name: correr contenedor
-        run: docker run test-image.
+        run: docker run test-image
