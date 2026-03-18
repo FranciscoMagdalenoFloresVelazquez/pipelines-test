@@ -1,13 +1,14 @@
-name: Test Pipeline
+name: Docker Build
 
 on: push
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Descargar repo
+        uses: actions/checkout@v3
 
-      - name: Run python
-        run: python3 app.py
+      - name: Build Docker image
+        run: docker build -t test-image .
