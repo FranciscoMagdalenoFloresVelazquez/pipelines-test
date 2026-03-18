@@ -1,4 +1,4 @@
-FROM ubuntu:3.10-slim
+FROM ubuntu:jammy
 WORKDIR /app 
 copy app.py .
 CMD ["python3","app.py:"]
